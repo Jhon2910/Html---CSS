@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+body{
+    height: 100hv;
+    background-color: black;
+    background-image: url(Imagens/background001.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+main{
+    background-color: white;
+    width: 40%;
+    padding: 10px;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 15px;}
