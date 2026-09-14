@@ -63,9 +63,6 @@
       border-color: var(--laranja);
       transform: translateY(-1px);
     }
-      border-color: #9ca3af;
-      transform: translateY(-1px);
-    }
 
     .auth-divider {
       display: flex;
@@ -535,11 +532,11 @@
             <form class="form-auth" id="form-cadastro-inicial">
               <div>
                 <label for="cad-nome">Seu Nome / Gamer Tag</label>
-                <input type="text" id="cad-nome" placeholder="Ex: Jonathan Alexandre" required>
+                <input type="text" id="cad-nome" placeholder="Nome de usuario" required>
               </div>
               <div>
                 <label for="cad-email">Seu E-mail</label>
-                <input type="email" id="cad-email" placeholder="jonathanalexandre2910@gmail.com" required>
+                <input type="email" id="cad-email" placeholder="e-mail@exemplo.com" required>
               </div>
               <button type="submit" class="btn-auth-submit">
                 <i class="fa-solid fa-right-to-bracket"></i> Entrar / Cadastrar Perfil
@@ -550,15 +547,15 @@
               <span>ou acesso rápido</span>
             </div>
 
-            <button class="btn-quick-login" id="btn-quick-jonathan">
+            <button class="btn-quick-login" id="btn-quick-convidado">
               <i class="fa-solid fa-user-check"></i>
-              <span>Entrar como Jonathan Alexandre</span>
+              <span>Entrar como convidado</span>
             </button>
           </div>
         `;
 
-        document.getElementById("btn-quick-jonathan")?.addEventListener("click", () => {
-          cadastrarOuTrocarContaManual("Jonathan Alexandre", "jonathanalexandre2910@gmail.com", "img/avatar-jonathan.png");
+        document.getElementById("btn-quick-convidado")?.addEventListener("click", () => {
+          cadastrarOuTrocarContaManual("convidado");
           window.location.reload();
         });
 
@@ -627,10 +624,9 @@
                 return `
                   <div class="card-conta-item ${ehAtiva ? 'ativa' : ''}">
                     <div class="card-conta-user">
-                      <img src="${conta.foto || 'img/avatar-jonathan.png'}" class="card-conta-foto" onerror="this.src='img/avatar-jonathan.png'">
+                      <img src="${conta.foto || ''}" class="card-conta-foto">
                       <div class="card-conta-detalhes">
                         <strong>${escapeHtml(conta.nome)}</strong>
-                        <span>${escapeHtml(conta.email)}</span>
                       </div>
                     </div>
                     <div>
@@ -639,9 +635,7 @@
                           <i class="fa-solid fa-check"></i> Ativa
                         </span>
                       ` : `
-                        <button class="btn-perfil-acao" onclick="trocarParaConta('${escapeHtml(conta.email)}')" style="padding: 4px 8px; font-size: 11px;">
-                          Alternar
-                        </button>
+                      
                       `}
                     </div>
                   </div>
