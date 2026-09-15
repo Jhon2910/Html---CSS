@@ -55,5 +55,5 @@ O portfólio está configurado na raiz do repositório e hospedado via **GitHub 
 ## 👨‍💻 Autor
 
 Desenvolvido por **Jonathan Alexandre Rodrigues Alves**  
-- **LinkedIn:** [linkedin.com/in/jonathan-alexandre-660086307](https://www.linkedin.com/in/jonathan-alexandre-660086307/)  
+- **LinkedIn:**
 - **GitHub:** [@Jhon2910](https://github.com/Jhon2910)
